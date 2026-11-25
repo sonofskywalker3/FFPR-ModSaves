@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Build against an Xbox app copy of any of the six games, after BepInEx has run in it once
+    (it needs BepInEx/interop, including XGamingRuntime.dll, which only the Xbox app builds have):
+      dotnet build src/ModSaves -c Release -p:GameDir="C:\XboxGames\FINAL FANTASY\Content"
+    The plugin itself loads on Steam copies too: the Xbox part is only used when the game has it.
+  -->
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>ModSaves</AssemblyName>
+    <RootNamespace>ModSaves</RootNamespace>
+    <Version>0.1.0</Version>
+    <GameDir Condition="'$(GameDir)' == ''">C:\XboxGames\FINAL FANTASY\Content</GameDir>
+    <BepInExCore>$(GameDir)\BepInEx\core</BepInExCore>
+    <InteropDir>$(GameDir)\BepInEx\interop</InteropDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="$(BepInExCore)\BepInEx.Core.dll" Private="false" />
+    <Reference Include="$(BepInExCore)\BepInEx.Unity.IL2CPP.dll" Private="false" />
+    <Reference Include="$(BepInExCore)\Il2CppInterop.Runtime.dll" Private="false" />
+    <Reference Include="$(BepInExCore)\0Harmony.dll" Private="false" />
+    <Reference Include="$(InteropDir)\Assembly-CSharp.dll" Private="false" />
+    <Reference Include="$(InteropDir)\Il2Cppmscorlib.dll" Private="false" />
+    <Reference Include="$(InteropDir)\XGamingRuntime.dll" Private="false" />
+  </ItemGroup>
+
+</Project>
