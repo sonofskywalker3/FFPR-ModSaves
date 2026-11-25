@@ -34,7 +34,9 @@ To go back to your normal saves, delete `ModSaves.dll` (or set `SaveSet` to noth
 
 | Setting | Default | What it does |
 | --- | --- | --- |
-| `SaveSet` | `Mod` | The save set's name. Use a different name for each mod setup to keep several sets apart, for example `Rando` for a randomizer and `Mod` for everything else. Empty means the normal saves. |
+| `SaveSet` | `Mod` | The save set's name. Use a different name for each mod setup to keep several sets apart, for example `Rando` for a randomizer and `Mod` for everything else. Letters and digits only, and not the start of one of the game's own names (`S`, `Slot`, `Sys` are refused; the plugin then uses `Mod`). Empty means the normal saves. |
+
+For one start only, the command-line option `-modsaves-saveset <name>` overrides `SaveSet` without changing the file (used by test runs).
 
 ## Steam players: please report
 
