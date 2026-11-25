@@ -63,6 +63,12 @@ dotnet test tests/ModSaves.Tests
 - [BepInEx](https://github.com/BepInEx/BepInEx), [Il2CppInterop](https://github.com/BepInEx/Il2CppInterop)
   and [Harmony](https://github.com/pardeike/Harmony), which every Pixel Remaster plugin stands on.
 
+## AI disclosure
+
+I design my mods and test them, but I'm not a programmer: the code here was written with Claude
+Code (Anthropic), under my direction, and checked by me in game. Mod Saves contains no artwork and
+no game content.
+
 ## Licence
 
 MIT, see [LICENSE](LICENSE). Not affiliated with or endorsed by Square Enix.
