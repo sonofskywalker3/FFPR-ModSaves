@@ -65,8 +65,8 @@ dotnet test tests/ModSaves.Tests
 
 ## AI disclosure
 
-I design my mods and test them, but I'm not a programmer: the code here was written with Claude
-Code (Anthropic), under my direction, and checked by me in game. Mod Saves contains no artwork and
+I design my mods and test them, but I'm not a programmer: the code and these docs were written
+with Claude Code (Anthropic), under my direction, and checked by me in game. Mod Saves contains no artwork and
 no game content.
 
 ## Licence
